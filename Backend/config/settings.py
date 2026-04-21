@@ -91,8 +91,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'almaty-tours',     # Имя базы, которую ты создал
+        'USER': 'postgres',            # Твой логин в Postgres
+        'PASSWORD': '1234',     # Твой пароль в Postgres
+        'HOST': '127.0.0.1',           # Локальный хост
+        'PORT': '5432',                # Стандартный порт Postgres
     }
 }
 
